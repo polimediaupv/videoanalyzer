@@ -174,7 +174,7 @@ int main(int argc, char ** argv) {
 		va.setFrameStep(cb->frameStep());
 		while (va.nextFrame()) {
 			const cv::Mat currentFrame = va.getCurrentFrame();
-			if (cb->showWindow()) {
+			if (cb->showWindow() && currentFrame.rows>0 && currentFrame.rows>0) {
 				cv::imshow("mainWin", currentFrame);
 			}
 		}
